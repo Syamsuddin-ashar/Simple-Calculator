@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Deklarasi tipe dokumen sebagai HTML5 -->
+    <meta charset="UTF-8"> <!-- Mengatur karakter encoding menjadi UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Memastikan tampilan halaman responsif pada berbagai perangkat -->
+    <title>Kalkulator Sederhana</title> <!-- Judul halaman yang akan tampil di tab browser -->
+    <link rel="stylesheet" href="style.css"> <!-- Menghubungkan halaman dengan file CSS eksternal untuk gaya -->
+</head>
+<body>
+    <div class="calculator"> <!-- Kontainer utama untuk kalkulator -->
+        <!-- Tampilan layar kalkulator yang hanya bisa dibaca (readonly) -->
+        <input type="text" id="display" readonly>
+        
+        <div class="buttons"> <!-- Kontainer untuk semua tombol kalkulator -->
+            <!-- Tombol untuk menghapus semua isi layar -->
+            <button onclick="clearDisplay()">C</button>
+            <!-- Tombol untuk mengubah tanda bilangan positif/negatif -->
+            <button onclick="toggleSign()">±</button>
+            <!-- Tombol untuk menghitung persentase -->
+            <button onclick="calculatePercentage()">%</button>
+            <!-- Tombol untuk menghapus satu digit di layar -->
+            <button onclick="deleteDigit()">←</button>
+            <!-- Tombol angka 7 -->
+            <button onclick="appendNumber('7')">7</button>
+            <!-- Tombol angka 8 -->
+            <button onclick="appendNumber('8')">8</button>
+            <!-- Tombol angka 9 -->
+            <button onclick="appendNumber('9')">9</button>
+            <!-- Tombol operator pembagian -->
+            <button onclick="appendOperator('/')">/</button>
+            <!-- Tombol angka 4 -->
+            <button onclick="appendNumber('4')">4</button>
+            <!-- Tombol angka 5 -->
+            <button onclick="appendNumber('5')">5</button>
+            <!-- Tombol angka 6 -->
+            <button onclick="appendNumber('6')">6</button>
+            <!-- Tombol operator perkalian -->
+            <button onclick="appendOperator('*')">*</button>
+            <!-- Tombol angka 1 -->
+            <button onclick="appendNumber('1')">1</button>
+            <!-- Tombol angka 2 -->
+            <button onclick="appendNumber('2')">2</button>
+            <!-- Tombol angka 3 -->
+            <button onclick="appendNumber('3')">3</button>
+            <!-- Tombol operator pengurangan -->
+            <button onclick="appendOperator('-')">-</button>
+            <!-- Tombol angka 0 -->
+            <button onclick="appendNumber('0')">0</button>
+            <!-- Tombol desimal (titik) -->
+            <button onclick="appendNumber('.')">.</button>
+            <!-- Tombol untuk menghitung akar kuadrat -->
+            <button onclick="calculateSquareRoot()">√</button>
+            <!-- Tombol operator penjumlahan -->
+            <button onclick="appendOperator('+')">+</button>
+            <!-- Tombol untuk menghitung hasil (sama dengan) -->
+            <button onclick="calculateResult()" class="equal">=</button>
+        </div>
+    </div>
+    
+    <!-- Menghubungkan halaman dengan file JavaScript eksternal untuk menangani logika kalkulator -->
+    <script src="script.js"></script>
+</body>
+</html>

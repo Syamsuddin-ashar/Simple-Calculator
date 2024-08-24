@@ -1,0 +1,64 @@
+/* Mengatur gaya dasar untuk elemen body */
+body {
+    font-family: Arial, sans-serif; /* Mengatur font utama ke Arial, dengan fallback ke sans-serif */
+    display: flex; /* Menggunakan Flexbox untuk penataan elemen anak */
+    justify-content: center; /* Memposisikan konten secara horizontal di tengah */
+    align-items: center; /* Memposisikan konten secara vertikal di tengah */
+    height: 100vh; /* Membuat tinggi body sebesar 100% dari tinggi viewport */
+    background-color: #f4f4f4; /* Memberikan warna latar belakang abu-abu muda */
+}
+
+/* Mengatur gaya untuk kontainer kalkulator */
+.calculator {
+    border: 1px solid #ccc; /* Menambahkan border abu-abu muda di sekitar kalkulator */
+    padding: 20px; /* Memberikan jarak antara konten dan tepi kalkulator */
+    background-color: #fff; /* Memberikan warna latar belakang putih */
+    border-radius: 10px; /* Membuat sudut kalkulator menjadi melengkung */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan halus di sekitar kalkulator */
+}
+
+/* Mengatur gaya untuk layar tampilan kalkulator */
+#display {
+    width: 100%; /* Membuat lebar layar tampilan sebesar 100% dari lebar kontainer */
+    height: 50px; /* Mengatur tinggi layar tampilan */
+    font-size: 1.5em; /* Mengatur ukuran font lebih besar untuk visibilitas */
+    text-align: right; /* Mengatur teks agar sejajar ke kanan */
+    margin-bottom: 10px; /* Menambahkan jarak di bawah layar tampilan */
+    padding: 10px; /* Memberikan ruang di dalam layar tampilan */
+    box-sizing: border-box; /* Mengatur box-sizing agar padding termasuk dalam ukuran total elemen */
+}
+
+/* Mengatur tata letak tombol-tombol kalkulator */
+.buttons {
+    display: grid; /* Menggunakan Grid Layout untuk tata letak tombol */
+    grid-template-columns: repeat(4, 1fr); /* Membuat grid dengan 4 kolom, dengan lebar kolom yang sama */
+    gap: 10px; /* Memberikan jarak antara tombol-tombol */
+}
+
+/* Mengatur gaya umum untuk semua tombol */
+button {
+    padding: 20px; /* Menambahkan ruang di dalam tombol untuk kenyamanan klik */
+    font-size: 1.2em; /* Mengatur ukuran font tombol agar mudah dibaca */
+    border: none; /* Menghapus border default tombol */
+    background-color: #f0f0f0; /* Memberikan warna latar belakang abu-abu muda pada tombol */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat hover */
+    border-radius: 5px; /* Membuat sudut tombol menjadi melengkung */
+    transition: background-color 0.2s; /* Menambahkan transisi halus saat warna latar tombol berubah */
+}
+
+/* Mengatur gaya untuk tombol saat di-hover */
+button:hover {
+    background-color: #ddd; /* Mengubah warna latar belakang saat tombol di-hover */
+}
+
+/* Mengatur gaya khusus untuk tombol '=' */
+button.equal {
+    grid-column: span 4; /* Membuat tombol '=' memenuhi lebar penuh satu baris grid */
+    background-color: #4caf50; /* Memberikan warna latar belakang hijau pada tombol '=' */
+    color: white; /* Mengatur warna teks menjadi putih */
+}
+
+/* Mengatur gaya khusus untuk tombol '=' saat di-hover */
+button.equal:hover {
+    background-color: #45a049; /* Mengubah warna latar belakang menjadi hijau lebih gelap saat di-hover */
+}
